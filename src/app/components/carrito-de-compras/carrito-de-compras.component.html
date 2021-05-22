@@ -1,0 +1,24 @@
+<div id="container">
+    <img class="img-tuya" src="assets/images/logoTuyaPay.svg" alt="Card image cap">
+    <h2 style="margin-top: 25px;">Estos fueron los productos que elegiste:</h2>
+    <table>
+        <thead>
+          <tr>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of jsonRes">
+            <td> {{item.nombreProducto}} </td>
+            <td> {{item.precioProducto | currency}} </td>
+          </tr>
+        </tbody>
+    </table>  
+    <h2 style="margin-top: 25px;">Total a pagar: {{total}}</h2>
+    <div id="container-button">
+        <button type="button" class="btn btn-primary" id="boton-atras" (click)="cancelar()">Cancelar</button>
+        <button type="button" class="btn btn-primary" id="boton-general" (click)="navigate()">Pagar</button>
+    </div>
+</div>
+

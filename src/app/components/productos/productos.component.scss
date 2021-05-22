@@ -1,0 +1,89 @@
+@import "../../../styles.scss";
+
+.product-card{
+    text-align: left;
+    width: 208px;
+    height: 190px;
+    margin: 0px 0px 12px 0px;
+}
+
+#card-image{
+    width: calc(58% + 32px);
+    margin: auto 2vw;
+}
+
+.mat-card-header {
+    display: inline-flex;
+}
+
+#container-cards{
+    margin: 20px;
+    column-width: 14rem;
+    -webkit-column-width: 14rem;
+    column-gap: 1rem;
+    -webkit-column-gap: 1rem;
+}
+
+#add-card{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.img-tuya{
+    height: 70px;
+    margin: 20px auto;
+}
+
+h2{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#compras{
+    width: min-content;
+    position: fixed;
+    right: 2px;
+    bottom: 2px;
+    z-index: 1;
+} 
+
+#header-compras{
+    background: #ED1C29;
+    color: #FFFFFF;
+    height: 30px;
+    width: 96px;
+    padding-top: 8px;
+    border: black 1px;
+}
+
+#body-compras{
+    background: #FFFFFF;
+    color: $tittle;
+    height: 110px;
+    width: 96px;
+    padding-top: 8px;
+    border: black 1px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#boton-atras{
+    background-color: $background;
+    color: $tittle;
+    box-shadow: inset 1px 1px 2px #babecc, -2px 2px 5px #fff;
+    border-radius: 16px;
+    opacity: 1;
+    height: 48px;
+    border: $background;
+    font-size: 20px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+#boton-atras,#boton-general{
+    width: 256px;
+    margin: 20px;
+}

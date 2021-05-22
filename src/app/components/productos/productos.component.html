@@ -1,0 +1,29 @@
+<div id="container">
+    <img class="img-tuya" src="assets/images/logoTuyaPay.svg" alt="Card image cap">
+    <h2 style="margin-top: 25px;">Elige los productos que deseas comprar!</h2>
+    <div id="container-cards">
+        <mat-card class="product-card" *ngFor="let item of jsonRes">
+            <mat-card-header>
+              <div class="product-header-image"></div>
+              <mat-card-title>{{item.nombreProducto}}</mat-card-title>
+              <mat-card-subtitle>Precio: {{item.precioProducto | currency}}</mat-card-subtitle>
+            </mat-card-header>
+            <img id="card-image" mat-card-image src="{{item.imagenProducto}}" alt="Img not found">     
+            <img id="add-card" src="assets/images/carroCompras.svg" alt="Img not found" (click)="agregarProducto(item.id)" title="Agregar al carrito">    
+        </mat-card>
+    </div>
+    <div id="compras">
+        <div id="header-compras">
+            ¿Terminaste?
+        </div>
+        <div id="body-compras" (click)="navigate()">            
+            <img style="margin-top: 20px;" src="assets/images/carroCompras.svg" alt="Img not found" title="Agregar al carrito">    
+            <br>
+            Ir a carrito de compras.
+        </div>
+    </div>
+    <div id="container-button">
+        <button type="button" class="btn btn-primary" id="boton-atras" (click)="atras()">Atrás</button>
+        <button type="button" class="btn btn-primary" id="boton-general" (click)="navigate()">Ingresar</button>
+    </div>
+</div>

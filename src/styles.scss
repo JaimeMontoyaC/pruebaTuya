@@ -1,0 +1,45 @@
+//Fuente
+$font-type: 'Roboto','Helvetica Neue', sans-serif;
+
+//colores globales
+$background: #f4f4f4;
+$tittle: #515c6f;
+$red-button: #c40311;
+
+head,body{
+    background: $background;
+}
+
+#container{
+    text-align: center;
+    font-family: $font-type;
+    color: $tittle;
+}
+
+#header-tittle{
+    font-size: 15px;
+    color: $tittle;
+    margin-top: 40px;
+}
+
+.img-tuya{
+    height: 190px;
+    margin: 40px auto;
+}
+
+#boton-general{
+    background-color: $red-button;
+    color: $background;
+    box-shadow: -5px -5px 8px $background;
+    border-radius: 16px;
+    opacity: 1;
+    width: 456px;
+    height: 48px;
+    border: $background;
+    font-size: 20px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

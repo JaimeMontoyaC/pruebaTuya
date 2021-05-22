@@ -1,0 +1,59 @@
+<div id="container">
+    <img class="img-tuya" src="assets/images/logoTuyaPay.svg" alt="Card image cap">
+    <h2 style="margin-top: 25px;">Ingresa los datos de tú tarjeta</h2>
+    <mat-form-field appearance="fill">
+        <mat-label>Método de pago</mat-label>
+        <mat-select (selectionChange)="seleccionarMetodoPago($event)">
+            <mat-option *ngFor="let metodo of metPagos" [value]="metodo.value" >
+              {{metodo.viewValue}}
+            </mat-option>
+          </mat-select>
+    </mat-form-field>
+    <div id="tc" style="display: none;">
+        <img class="img-tuya" src="assets/images/creditCard.png" alt="Card image cap">
+        <br>
+        <form [formGroup]="datosFormCred" (ngSubmit)="onSubmit()">
+        <mat-form-field class="form-full-width">
+            <mat-label>Nombre Completo</mat-label>
+            <input matInput formControlName="name" autocomplete="off" required> 
+        </mat-form-field>
+        <br>
+        <mat-form-field class="form-full-width">
+            <mat-label>Número de la tarjeta</mat-label>
+            <input type="text" numbersOnly minlength="16" maxlength="16" matInput formControlName="numTarjeta" autocomplete="off" required> 
+        </mat-form-field>
+        <br>
+        <mat-form-field class="form-full-width">
+            <mat-label>Código de seguridad</mat-label>
+            <input type="text" numbersOnly minlength="4" maxlength="4" maxlength="4" matInput formControlName="codigo" autocomplete="off" required> 
+        </mat-form-field>
+        <br>
+        <button [disabled]="!datosFormCred.valid" type="submit" class="btn btn-primary" id="boton-general">Confirmar</button>
+        </form>
+    </div>
+    <div id="td" style="display: none;">
+        <img class="img-tuya" src="assets/images/debitCard.png" alt="Card image cap">
+        <br>
+        <form [formGroup]="datosFormDeb" (ngSubmit)="onSubmit()">
+            <mat-form-field class="form-full-width">
+                <mat-label>Nombre Completo</mat-label>
+                <input matInput formControlName="name" autocomplete="off" required> 
+            </mat-form-field>
+            <br>
+            <mat-form-field class="form-full-width">
+                <mat-label>Número de la tarjeta</mat-label>
+                <input type="text" numbersOnly minlength="16" maxlength="16" matInput formControlName="numTarjeta" autocomplete="off" required> 
+            </mat-form-field>
+            <br>
+            <mat-form-field class="form-full-width">
+                <mat-label>Código de seguridad</mat-label>
+                <input type="text" numbersOnly minlength="4" maxlength="4" maxlength="4" matInput formControlName="codigo" autocomplete="off" required> 
+            </mat-form-field>
+            <br>
+            <button [disabled]="!datosFormDeb.valid" type="submit" class="btn btn-primary" id="boton-general">Confirmar</button>
+        </form>
+    </div>
+    <div id="container-button">
+        <button type="button" class="btn btn-primary" id="boton-atras" (click)="cancelar()">Cancelar</button>
+    </div>
+</div>

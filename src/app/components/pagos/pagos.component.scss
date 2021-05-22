@@ -1,0 +1,35 @@
+@import "../../../styles.scss";
+
+.img-tuya{
+    height: 70px;
+    margin: 20px auto;
+}
+
+h2{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#boton-atras{
+    background-color: $background;
+    color: $tittle;
+    box-shadow: inset 1px 1px 2px #babecc, -2px 2px 5px #fff;
+    border-radius: 16px;
+    opacity: 1;
+    height: 48px;
+    border: $background;
+    font-size: 20px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+#boton-atras,#boton-general{
+    width: 256px;
+    margin: 20px;
+}
+
+#boton-general:disabled{
+    opacity: 0.5;
+    cursor: default;
+}

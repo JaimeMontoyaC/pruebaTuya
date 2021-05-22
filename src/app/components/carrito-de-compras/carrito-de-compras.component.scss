@@ -1,0 +1,46 @@
+@import "../../../styles.scss";
+
+.img-tuya{
+    height: 70px;
+    margin: 20px auto;
+}
+
+h2{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#boton-atras{
+    background-color: $background;
+    color: $tittle;
+    box-shadow: inset 1px 1px 2px #babecc, -2px 2px 5px #fff;
+    border-radius: 16px;
+    opacity: 1;
+    height: 48px;
+    border: $background;
+    font-size: 20px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+#boton-atras,#boton-general{
+    width: 256px;
+    margin: 20px;
+}
+
+table, th , td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+  
+table tr:nth-child(odd) {
+    background-color: #f1f1f1;
+}
+
+table tr:nth-child(even) {
+    background-color: #ffffff;
+}
